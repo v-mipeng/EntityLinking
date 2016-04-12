@@ -1,0 +1,8 @@
+# ignore file for feature branch: exclude readme,output.
+/*
+!/source/
+!/Properties/
+!/.gitignore
+!/App.config
+!/Alias.csproj
+!/config.xml
