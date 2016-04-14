@@ -4,6 +4,5 @@
 !/Properties/
 !/.gitignore
 !/App.config
-!/Alias.csproj
+!/Script.csproj
 !/config.xml
-!/experiment/
