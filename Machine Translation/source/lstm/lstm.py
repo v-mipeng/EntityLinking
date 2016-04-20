@@ -97,7 +97,7 @@ def init_params(options):
                               options['dim_proj'])
     params['Wemb'] = (0.01 * randn).astype(config.floatX)   # initialize word embeding parameters
     params = get_layer(options['encoder'])[0](options,      # initialize lstm paramters
-                                              params, #layers = {'lstm': (param_init_lstm, lstm_layer)}
+                                              params,       #layers = {'lstm': (param_init_lstm, lstm_layer)}
                                               prefix=options['encoder'])
     # classifier
     params['U'] = 0.01 * numpy.random.randn(options['dim_proj'],    # initialize output parameters
@@ -522,7 +522,6 @@ def train_lstm(
     f_cost = theano.function([x, mask, y], cost, name='f_cost') # compile cost function (can be deleted)
 
     grads = tensor.grad(cost, wrt=list(tparams.values()))   # calculate symbolic gradient of cost on all the parameters
-    f_grad = theano.function([x, mask, y], grads, name='f_grad')    # compile symbolic gradient into function.
 
     lr = tensor.scalar(name='lr')
     f_grad_shared, f_update = optimizer(lr, tparams, grads,
