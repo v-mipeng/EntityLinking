@@ -41,9 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="alias\wikipedia\DataFilter.cs" />
-    <Compile Include="alias\wikipedia\Script.cs" />
-    <Compile Include="alias\wikipedia\Statistics.cs" />
+    <Compile Include="source\alias\wikipedia\DataFilter.cs" />
+    <Compile Include="source\alias\wikipedia\Script.cs" />
+    <Compile Include="source\alias\wikipedia\Statistics.cs" />
     <Compile Include="Entrance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
